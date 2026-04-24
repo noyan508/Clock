@@ -1,0 +1,157 @@
+@font-face{
+  font-family: 'Digital';
+  src: url(digital.ttf);
+}
+@font-face{
+  font-family: 'beast';
+  src:url(beast.otf);
+}
+  @font-face{
+    font-family: 'sis';
+    src:url(sis.otf);
+  }
+@font-face{
+    font-family: 'mid';
+    src:url(mid.ttf);
+  }
+body {
+  background-color: lightblue;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0; 
+}
+
+.box {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: khaki;
+  border-radius: 50%;
+  border: 10px solid black; 
+  font-family: 'digital',sans-serif;
+}
+
+.num {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  padding: 10px; 
+  box-sizing: border-box;
+  /*font-family: 'beast',sans-serif;*/
+}
+
+/* সব স্প্যানকে ইনলাইন-ব্লক করা যাতে তারা ঘুরতে পারে */
+.num span {
+  display: inline-block;
+}
+
+.n1 { transform: rotate(30deg); } .n1 span { transform: rotate(-30deg); }
+.n2 { transform: rotate(60deg); } .n2 span { transform: rotate(-60deg); } /* এখানে ভুল ছিল */
+.n3 { transform: rotate(90deg); } .n3 span { transform: rotate(-90deg); }
+.n4 { transform: rotate(120deg); } .n4 span { transform: rotate(-120deg); }
+.n5 { transform: rotate(150deg); } .n5 span { transform: rotate(-150deg); }
+.n6 { transform: rotate(180deg); } .n6 span { transform: rotate(-180deg); }
+.n7 { transform: rotate(210deg); } .n7 span { transform: rotate(-210deg); }
+.n8 { transform: rotate(240deg); } .n8 span { transform: rotate(-240deg); }
+.n9 { transform: rotate(270deg); } .n9 span { transform: rotate(-270deg); }
+.n10 { transform: rotate(300deg); } .n10 span { transform: rotate(-300deg); }
+.n11 { transform: rotate(330deg); } .n11 span { transform: rotate(-330deg); }
+.n12 { transform: rotate(360deg); } .n12 span { transform: rotate(-360deg); }
+
+
+.win, .win2, .win3 {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.win{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 3px; 
+    height: 170px; 
+    background-color: black;
+    transform-origin:bottom;
+    transform: translateX(-50%);
+}
+
+
+.win2 {
+      clip-path: polygon(50% 0%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 50% 0%);
+  height: 150px;
+  width: 12px;
+  transform: translateX(-50%) rotate(0deg);
+  /*z-index: 2;*/
+}
+
+
+.win3 {
+  height: 100px;
+  width: 14px;
+  transform: translateX(-50%) rotate(0deg);
+  /*z-index: 1;*/
+  clip-path: polygon(50% 0%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 50% 0%);
+}
+.center-pin {
+    width: 20px; /* বিন্দুর আকার */
+    height: 20px;
+    background-color: #222; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    
+    z-index: 100; 
+    
+    
+    border: 2px solid #555;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#tyme{
+  position:absolute;
+  top: 25%;
+  left: 28%;
+  /*background-color: thistle ;*/
+ color: orangered;
+  z-index: 100;
+  box-shadow: inset 0px 5px 15px rgba(0 , 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 6px;
+}
+.tyme1{
+  font-size: 65px;
+  font-family: 'Digital' , sans-serif;
+  
+}
+.tyme2{
+  font-size: 35px;
+  font-family: 'mid' , sans-serif;
+}
+
+/*.bit{
+  position:absolute;
+  top: 25%;
+  left: 46%;
+  font-size: 50px;
+  background-color: red;
+  transition: opacity 0.5s ease-in-out;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{opacity: 1;}
+  50%{opacity: 0;}
+  100%{opacity: 1;}
+}*/
